@@ -18,13 +18,13 @@ else:
   
     if jenis_tiket == "reguler" or jenis_tiket == "1":
         harga_tiket = 50000
-        jenis_tiket = "Reguler"
+        nama_tiket = "Reguler"
     elif jenis_tiket == "premium" or jenis_tiket == "2":
         harga_tiket = 75000
-        jenis_tiket = "Premium"
+        nama_tiket = "Premium"
     elif jenis_tiket == "vip" or jenis_tiket == "3": 
         harga_tiket = 100000
-        jenis_tiket = "VIP"
+        nama_tiket = "VIP"
     else:
         harga_tiket = 0
 
@@ -44,25 +44,22 @@ else:
         bayar = int(input("masukkan jumlah uang yang dibayarkan: Rp"))
         if bayar < total_bayar:
             print("uang yang anda bayarkan kurang, transaksi dibatalkan")
-        else:
-            if bayar > total_bayar:
-                kembalian = bayar - total_bayar
-            else:
-                kembalian = 0
+        else: 
+            kembalian = bayar - total_bayar
 
             print("\n" + "=" * 40)
             print("            STRUK PEMBELIAN")
             print("=" * 40)
-            print("Nama pembeli          : ", nama_pembeli)
-            print("Umur pembeli          : ", umur_pembeli)
-            print("Jenis tiket           : ", jenis_tiket)
+            print("Nama Pembeli          : ", nama_pembeli)
+            print("Umur Pembeli          : ", umur_pembeli)
+            print("Jenis Tiket           : ", nama_tiket)
             print("Status Member         : ", status_member)
             print("-" * 40)
-            print("Harga tiket           : Rp", harga_tiket)
-            print("Diskon member         : Rp", diskon)
-            print("Biaya admin           : Rp", biaya_admin)
+            print("Harga Tiket           : Rp", harga_tiket)
+            print("Diskon Member         : Rp", diskon)
+            print("Biaya Admin           : Rp", biaya_admin)
             print("-" * 40)
-            print("Total bayar           : Rp", total_bayar)
-            print("Uang bayar            : Rp", bayar )
-            print("Kembalian             : Rp", kembalian)
+            print("Total Bayar           : Rp", total_bayar)
+            print("Uang Bayar            : Rp", bayar )
+            print("Uang Kembalian        : Rp", kembalian)
             print("=" * 40)
